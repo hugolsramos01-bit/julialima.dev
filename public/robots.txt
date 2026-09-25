@@ -1,6 +1,6 @@
-# Search and real-time AI answers are allowed; model training is not.
+# Search, AI answers, and model training are allowed.
 User-agent: *
-Content-Signal: search=yes, ai-input=yes, ai-train=no
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 # Search engines
@@ -40,23 +40,29 @@ User-agent: Google-Extended
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
-# Crawlers associated with model training or bulk dataset collection remain blocked
+# Other AI training crawlers are allowed
 User-agent: GPTBot
-Disallow: /
+Content-Signal: ai-train=yes
+Allow: /
 
 User-agent: ClaudeBot
-Disallow: /
+Content-Signal: ai-train=yes
+Allow: /
 
 User-agent: Applebot-Extended
-Disallow: /
+Content-Signal: ai-train=yes
+Allow: /
 
 User-agent: Bytespider
-Disallow: /
+Content-Signal: ai-train=yes
+Allow: /
 
 User-agent: CCBot
-Disallow: /
+Content-Signal: ai-train=yes
+Allow: /
 
 User-agent: Meta-ExternalAgent
-Disallow: /
+Content-Signal: ai-train=yes
+Allow: /
 
 Sitemap: https://julialima.dev/sitemap-index.xml
