@@ -35,10 +35,12 @@ Allow: /
 User-agent: Meta-ExternalFetcher
 Allow: /
 
-# Crawlers associated with model training or bulk dataset collection
+# Google Gemini training and grounding are allowed
 User-agent: Google-Extended
-Disallow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
 
+# Crawlers associated with model training or bulk dataset collection remain blocked
 User-agent: GPTBot
 Disallow: /
 
