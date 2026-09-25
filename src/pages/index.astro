@@ -1,20 +1,43 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const description = 'Portfólio de Júlia Lima, Software Engineer e Data Engineer. Soluções full-stack, dados, BI e sistemas para problemas reais.';
+const description = 'Júlia Lima é engenheira de software e de dados em Recife. Desenvolve sistemas full-stack, APIs, pipelines e soluções de BI com Python, FastAPI, PostgreSQL, React e Power BI.';
+const personId = 'https://julialima.dev/#julia-lima';
+const websiteId = 'https://julialima.dev/#website';
 const personSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Júlia Lima',
-  jobTitle: 'Software Engineer & Data Engineer',
-  url: 'https://julialima.dev',
-  sameAs: ['https://www.linkedin.com/in/juliadbarros/', 'https://github.com/JuliadBarros'],
-  knowsAbout: ['Python', 'FastAPI', 'PostgreSQL', 'React', 'Power BI', 'ETL', 'Análise de dados'],
-  address: { '@type': 'PostalAddress', addressLocality: 'Recife', addressRegion: 'PE', addressCountry: 'BR' },
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': personId,
+      name: 'Júlia Lima',
+      image: 'https://julialima.dev/og.png',
+      description,
+      jobTitle: 'Software Engineer & Data Engineer',
+      url: 'https://julialima.dev/',
+      email: 'julia.vagas02@gmail.com',
+      sameAs: ['https://www.linkedin.com/in/juliadbarros/', 'https://github.com/JuliadBarros'],
+      knowsAbout: ['Engenharia de Software', 'Engenharia de Dados', 'Python', 'FastAPI', 'PostgreSQL', 'React', 'Power BI', 'ETL', 'Análise de dados'],
+      alumniOf: [
+        { '@type': 'CollegeOrUniversity', name: 'Centro de Informática da Universidade Federal de Pernambuco' },
+        { '@type': 'CollegeOrUniversity', name: 'Estácio' },
+      ],
+      address: { '@type': 'PostalAddress', addressLocality: 'Recife', addressRegion: 'Pernambuco', addressCountry: 'BR' },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      name: 'Júlia Lima — Engenharia de Software e Dados',
+      url: 'https://julialima.dev/',
+      description,
+      inLanguage: 'pt-BR',
+      publisher: { '@id': personId },
+    },
+  ],
 };
 ---
 
-<BaseLayout title="Júlia Lima — Software Engineer & Data Engineer" description={description} jsonLd={personSchema}>
+<BaseLayout title="Júlia Lima — Engenharia de Software e Dados em Recife" description={description} jsonLd={personSchema}>
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy-block">

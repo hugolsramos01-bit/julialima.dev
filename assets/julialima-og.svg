@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#2459d3" stroke-opacity=".08" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#142236"/>
+      <stop offset="1" stop-color="#0d1420"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#f6f4ee"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="765" y="0" width="435" height="630" fill="url(#panel)"/>
+  <path d="M765 0h1v630h-1z" fill="#2459d3"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="86" y="91" fill="#2459d3" font-size="17" font-weight="700" letter-spacing="3">PORTFÓLIO PROFISSIONAL</text>
+    <text x="82" y="239" fill="#17202c" font-size="92" font-weight="700" letter-spacing="-5">Júlia Lima</text>
+    <text x="88" y="300" fill="#344253" font-size="25" font-weight="700">ENGENHARIA DE SOFTWARE · DADOS · BI</text>
+    <text x="88" y="365" fill="#596574" font-size="23">Sistemas, pipelines e análises para problemas reais.</text>
+    <rect x="88" y="433" width="51" height="4" fill="#2459d3"/>
+    <text x="88" y="482" fill="#596574" font-size="18" font-weight="700" letter-spacing="2">RECIFE · PERNAMBUCO · BRASIL</text>
+    <text x="88" y="563" fill="#758091" font-size="17">julialima.dev</text>
+  </g>
+  <g fill="none" stroke="#4e7be1" stroke-opacity=".55" stroke-width="2">
+    <path d="M849 166h110l53 66h101M849 298h77l55-64h132M849 431h89l53-67h122M849 166v265"/>
+    <path d="M901 166v132m111-132v198m101-132v166" stroke="#6dc3a0" stroke-opacity=".5"/>
+  </g>
+  <g fill="#6dc3a0">
+    <circle cx="849" cy="166" r="7"/><circle cx="959" cy="166" r="7"/><circle cx="1065" cy="232" r="7"/><circle cx="1113" cy="232" r="7"/>
+    <circle cx="849" cy="298" r="7"/><circle cx="926" cy="298" r="7"/><circle cx="981" cy="234" r="7"/><circle cx="1113" cy="234" r="7"/>
+    <circle cx="849" cy="431" r="7"/><circle cx="938" cy="431" r="7"/><circle cx="991" cy="364" r="7"/><circle cx="1113" cy="364" r="7"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#ecf0f8">
+    <text x="849" y="520" font-size="15" font-weight="700" letter-spacing="2">PYTHON · FASTAPI · REACT</text>
+    <text x="849" y="550" font-size="15" font-weight="700" letter-spacing="2">POSTGRESQL · POWER BI</text>
+  </g>
+</svg>

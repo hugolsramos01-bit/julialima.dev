@@ -1,11 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const description = 'Sobre Júlia Lima: formação em Ciência da Computação, pós-graduação em Ciência de Dados e atuação em software, dados e BI.';
-const personSchema = { '@context': 'https://schema.org', '@type': 'Person', name: 'Júlia Lima', alumniOf: [{ '@type': 'CollegeOrUniversity', name: 'Centro de Informática UFPE' }, { '@type': 'CollegeOrUniversity', name: 'Estácio' }] };
+const description = 'Conheça Júlia Lima, engenheira de software e de dados em Recife, formada em Ciência da Computação e pós-graduada em Ciência de Dados pelo CIn UFPE.';
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://julialima.dev/#julia-lima',
+  name: 'Júlia Lima',
+  url: 'https://julialima.dev/',
+  jobTitle: 'Software Engineer & Data Engineer',
+  sameAs: ['https://www.linkedin.com/in/juliadbarros/', 'https://github.com/JuliadBarros'],
+  alumniOf: [{ '@type': 'CollegeOrUniversity', name: 'Centro de Informática da Universidade Federal de Pernambuco' }, { '@type': 'CollegeOrUniversity', name: 'Estácio' }],
+};
 ---
 
-<BaseLayout title="Sobre — Júlia Lima" description={description} jsonLd={personSchema}>
+<BaseLayout title="Sobre Júlia Lima — Engenharia de Dados e Software" description={description} jsonLd={personSchema}>
   <header class="page-header"><div class="container"><p class="eyebrow">Sobre</p><h1>Entre o problema de negócio e a solução que permanece.</h1><p>Uma trajetória construída com curiosidade técnica, escuta e vontade de tornar informação útil.</p></div></header>
   <section class="section about-section"><div class="container about-grid"><div class="about-lead"><p class="section-kicker">01 / Contexto</p><h2>Software para dar forma aos dados.</h2></div><div class="section-text"><p>Sou formada em Ciência da Computação e pós-graduada em Ciência de Dados pelo Centro de Informática da UFPE (CIn).</p><p>Na Secretaria de Administração de Pernambuco, desenvolvo soluções para gestão patrimonial e de frotas, trabalhando com grandes volumes de dados e desafios de integração, performance, segurança, auditoria e controle de acesso.</p><p>Minha atuação percorre diferentes etapas: compreender o problema junto às áreas de negócio, integrar e modelar dados, definir regras, desenvolver APIs e interfaces, construir indicadores e disponibilizar aplicações em ambiente operacional.</p></div></div></section>
   <section class="section timeline-section"><div class="container two-column"><div><p class="section-kicker">02 / Formação</p><h2>Base técnica, prática contínua.</h2></div><div class="timeline"><article><span>2024 — 2026</span><h3>Especialização em Ciência de Dados</h3><p>Centro de Informática da UFPE (CIn)</p></article><article><span>2020 — 2023</span><h3>Bacharelado em Ciência da Computação</h3><p>Estácio · nível de formação 8,7</p></article><article><span>Certificações</span><h3>SQL, Power BI, Pandas e análise de dados</h3><p>Alura, Kaggle e Estácio</p></article></div></div></section>
