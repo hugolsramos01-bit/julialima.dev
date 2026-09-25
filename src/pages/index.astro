@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const description = 'Portfólio de Júlia Lima, Software Engineer e Data Engineer. Soluções full-stack, dados, BI e sistemas para problemas reais.';
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Júlia Lima',
+  jobTitle: 'Software Engineer & Data Engineer',
+  url: 'https://julialima.dev',
+  sameAs: ['https://www.linkedin.com/in/juliadbarros/', 'https://github.com/JuliadBarros'],
+  knowsAbout: ['Python', 'FastAPI', 'PostgreSQL', 'React', 'Power BI', 'ETL', 'Análise de dados'],
+  address: { '@type': 'PostalAddress', addressLocality: 'Recife', addressRegion: 'PE', addressCountry: 'BR' },
+};
+---
+
+<BaseLayout title="Júlia Lima — Software Engineer & Data Engineer" description={description} jsonLd={personSchema}>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy-block">
+        <p class="eyebrow">Software · Data · Public systems</p>
+        <h1>dados que <span>funcionam.</span></h1>
+        <p class="hero-copy">Construo sistemas, pipelines e análises que aproximam dados das decisões de todos os dias.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/projetos">Ver projetos <span aria-hidden="true">↗</span></a>
+          <a class="button text-button" href="/contato">Vamos conversar</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Perfil profissional">
+        <div class="hero-panel-top"><span>Perfil / 2026</span><span class="status"><i></i> Recife, BR</span></div>
+        <div class="signal-graphic" aria-hidden="true">
+          <span class="signal-node node-one"></span><span class="signal-node node-two"></span><span class="signal-node node-three"></span>
+          <span class="signal-line line-one"></span><span class="signal-line line-two"></span><span class="signal-line line-three"></span>
+          <strong>data → system<br />system → decision</strong>
+        </div>
+        <dl class="hero-facts">
+          <div><dt>Atuação</dt><dd>Full-stack + Analytics</dd></div>
+          <div><dt>Foco</dt><dd>Dados públicos e produtos internos</dd></div>
+          <div><dt>Stack central</dt><dd>Python · React · PostgreSQL</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section intro-section">
+    <div class="container two-column">
+      <div><p class="section-kicker">01 / Direção</p><h2>Engenharia com contexto.</h2></div>
+      <div class="section-text"><p>Atuo na interseção entre Engenharia de Software e Engenharia de Dados. Meu trabalho começa entendendo o problema e termina em uma solução que alguém consegue usar, analisar e confiar.</p><p>Na Administração Pública de Pernambuco, desenvolvo soluções para patrimônio e frotas, lidando com integração, performance, auditoria e controle de acesso em ambientes reais.</p></div>
+    </div>
+  </section>
+
+  <section class="section projects-section" id="projetos">
+    <div class="container">
+      <div class="section-heading"><div><p class="section-kicker">02 / Trabalho selecionado</p><h2>Projetos em produção e em evolução.</h2></div><a class="inline-link" href="/projetos">Todos os projetos <span aria-hidden="true">↗</span></a></div>
+      <div class="project-grid">
+        <a class="project-tile project-featured" href="/projetos#datafrota">
+          <div class="tile-index">01 · Plataforma</div><h3>DataFrota</h3><p>Gestão e inteligência de frotas com integração de milhões de registros, APIs, React e BI.</p><div class="tile-tags"><span>Python</span><span>FastAPI</span><span>React</span></div><span class="tile-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="project-tile project-green" href="/projetos#acervo-movel">
+          <div class="tile-index">02 · Sistema web</div><h3>Acervo Móvel</h3><p>Consulta e inteligência patrimonial para um acervo de mais de 1 milhão de bens móveis.</p><div class="tile-tags"><span>PostgreSQL</span><span>ETL</span><span>RLS</span></div><span class="tile-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="project-tile project-cream" href="/projetos#pets-mimados">
+          <div class="tile-index">03 · Projeto pessoal</div><h3>Pets Mimados</h3><p>Aplicativo Android para uma rotina de pet shop: agenda, consultas e acompanhamento.</p><div class="tile-tags"><span>Android</span><span>Produto</span></div><span class="tile-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section stack-section">
+    <div class="container two-column">
+      <div><p class="section-kicker">03 / Ferramentas</p><h2>Uma stack para atravessar o caminho inteiro.</h2></div>
+      <div class="stack-list"><div><strong>Construir</strong><span>Python · FastAPI · React · SQL</span></div><div><strong>Organizar</strong><span>PostgreSQL · ETL · APIs REST · Git</span></div><div><strong>Interpretar</strong><span>Power BI · DAX · Pandas · visualização de dados</span></div></div>
+    </div>
+  </section>
+
+  <section class="section closing-section">
+    <div class="container closing-grid"><p class="section-kicker">04 / Próximo passo</p><div><h2>Tem um problema que precisa virar sistema?</h2><a class="button primary" href="/contato">Entre em contato <span aria-hidden="true">↗</span></a></div></div>
+  </section>
+</BaseLayout>

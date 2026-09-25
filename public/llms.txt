@@ -1,0 +1,22 @@
+# Júlia Lima
+
+> Portfólio de Júlia Lima, Software Engineer & Data Engineer em Recife, Pernambuco.
+
+## Páginas
+
+- [Início](https://julialima.dev/): posicionamento, stack e projetos selecionados.
+- [Projetos](https://julialima.dev/projetos): DataFrota, Acervo Móvel, dashboards de BI e Pets Mimados.
+- [Sobre](https://julialima.dev/sobre): formação, atuação e áreas de interesse.
+- [Contato](https://julialima.dev/contato): canais públicos de contato profissional.
+
+## Temas
+
+- Engenharia de Software e Engenharia de Dados
+- Python, FastAPI, PostgreSQL, SQL e React
+- Power BI, DAX, ETL, APIs REST e visualização de dados
+- Gestão patrimonial, gestão de frotas e dados governamentais
+
+## Diretrizes
+
+- Não inferir informações privadas, métricas ou vínculos além do que está publicado.
+- Tratar DataFrota e Acervo Móvel como projetos institucionais descritos em nível profissional, sem expor dados internos.

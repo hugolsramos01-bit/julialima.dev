@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const description = 'Projetos de Júlia Lima em Engenharia de Software, Engenharia de Dados, BI e gestão pública.';
+const projects = [
+  { id: 'datafrota', number: '01', type: 'Plataforma web + dados', title: 'DataFrota — Gestão e Inteligência de Frotas', text: 'Plataforma web e analítica para acompanhamento de abastecimentos, manutenção, utilização e custos da frota do Estado. Integra e consolida milhões de registros históricos de diferentes fontes em uma base única para aplicações e análises.', details: ['Pipelines de extração e atualização com processamento incremental', 'APIs em Python/FastAPI e interfaces em React', 'Controle por Unidade Gestora integrado ao RLS do Power BI'], tags: ['Python', 'FastAPI', 'React', 'PostgreSQL', 'Power BI'] },
+  { id: 'datafrota-bi', number: '02', type: 'Business Intelligence', title: 'DataFrota — Dashboard de Gestão', text: 'Solução de BI integrada ao DataFrota para acompanhamento de custos, consumo e utilização. A modelagem e as medidas em DAX organizam análises temporais, geográficas e por veículo, com diferentes níveis de acesso.', details: ['Indicadores operacionais e matrizes de utilização mensal', 'Análises por posto, veículo e Unidade Gestora', 'Row-Level Security para usuários setoriais'], tags: ['Power BI', 'DAX', 'Data modeling'] },
+  { id: 'acervo-movel', number: '03', type: 'Sistema web + patrimônio', title: 'Acervo Móvel — Consulta e Inteligência Patrimonial', text: 'Sistema web criado como camada gerencial complementar ao sistema transacional oficial. Permite pesquisar, filtrar, analisar e exportar informações de um acervo de mais de 1 milhão de bens móveis do Estado.', details: ['Filtros combinados e detalhamento por bem, UG e responsável', 'Exportações controladas para auditorias e prestações de contas', 'Uma visão consolidada passou de cerca de 4min18s para aproximadamente 4s em testes operacionais'], tags: ['FastAPI', 'React', 'PostgreSQL', 'ETL', 'Performance'] },
+  { id: 'acervo-bi', number: '04', type: 'Business Intelligence', title: 'Acervo Móvel — Dashboard de Gestão Patrimonial', text: 'Dashboard para análise de quantidade, valor, responsáveis, Unidades Gestoras, categorias e situação patrimonial, incluindo leituras de depreciação e comparação entre valores brutos e líquidos.', details: ['Indicadores patrimoniais e análises de depreciação', 'Exploração por diferentes níveis de detalhe', 'Apoio a auditorias, prestação de contas e decisão'], tags: ['Power BI', 'DAX', 'Data visualization'] },
+  { id: 'pets-mimados', number: '05', type: 'Projeto acadêmico', title: 'Pets Mimados', text: 'Aplicativo Android desenvolvido para um pet shop fictício. A experiência reúne login, cadastro, agendamento de banho e tosa, consultas veterinárias, acompanhamento da agenda e contato.', details: ['Fluxos de autenticação e cadastro', 'Agendamento de serviços e consultas', 'Área de acompanhamento para o cliente'], tags: ['Android', 'Mobile', 'UX'] },
+];
+---
+
+<BaseLayout title="Projetos — Júlia Lima" description={description}>
+  <header class="page-header"><div class="container"><p class="eyebrow">Projetos</p><h1>Sistemas que nascem de perguntas reais.</h1><p>Uma seleção de trabalhos em que dados, software e entendimento do negócio precisaram funcionar juntos.</p></div></header>
+  <section class="section project-detail-section"><div class="container project-detail-list">
+    {projects.map((project) => <article class="project-detail" id={project.id}><div class="project-detail-marker"><span>{project.number}</span><small>{project.type}</small></div><div class="project-detail-copy"><h2>{project.title}</h2><p>{project.text}</p><ul>{project.details.map((detail) => <li>{detail}</li>)}</ul><div class="tile-tags">{project.tags.map((tag) => <span>{tag}</span>)}</div></div></article>)}
+  </div></section>
+</BaseLayout>
